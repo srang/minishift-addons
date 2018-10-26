@@ -36,8 +36,16 @@ Note: CentOS ISO is required for Fedora, CentOS, or RHEL hosts due to a [known i
 
 Start Minishift with the `--service-catalog` extra flag. See the [OpenShift documentation](https://docs.okd.io/latest/minishift/using/experimental-features.html#enabling-experimental-oc-flags) for more info on `--extra-cluster-up` flags.
 
+In version 3.9:
+
 ```
 minishift start --extra-clusterup-flags "--service-catalog"
+```
+
+In 3.10 or later the command is:
+
+```
+minishift start --extra-clusterup-flags "--enable=*,service-catalog"
 ```
 
 
